@@ -7,20 +7,20 @@ import Link from 'next/link';
 
 export function Hero() {
     return (
-        <section className="min-h-[50vh] flex flex-col justify-center px-6 md:px-0 max-w-2xl mx-auto pt-10 pb-0">
+        <section className="px-6 md:px-12 w-full">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
             >
-                <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-4">
+                <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4">
                     Kavin AG
                 </h1>
-                <h2 className="text-2xl md:text-3xl text-muted-foreground font-medium mb-8">
+                <h2 className="text-xl md:text-2xl text-muted-foreground font-medium mb-6">
                     <span className="text-cyan-500">Applied AI Engineer</span>
                 </h2>
 
-                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 max-w-xl">
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8 max-w-md">
                     I build applied AI systems — <span className="text-foreground">GenAI</span>, <span className="text-foreground">RAG pipelines</span>, and <span className="text-foreground">agentic workflows</span> that integrate into real-world applications.
                 </p>
 

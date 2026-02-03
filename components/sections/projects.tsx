@@ -11,19 +11,19 @@ export function Projects() {
             title: "TitanCompute",
             description: "Distributed LLM inference system enabling model sharding across heterogeneous consumer devices.",
             tags: ["Python", "gRPC", "PyTorch"],
-            link: "#"
+            link: "https://github.com/agkavin/TitanCompute"
         },
         {
             title: "RetailSense",
             description: "Multi-agent simulation for optimizing inventory and dynamic pricing strategies in retail environments.",
             tags: ["Agentic AI", "Simulation", "FastAPI"],
-            link: "#"
+            link: "https://github.com/agkavin"
         },
         {
             title: "RAG Pipelines",
             description: "Modular, high-performance retrieval architectures with tool-use capabilities for enterprise knowledge bases.",
             tags: ["RAG", "Vector DB", "LangChain"],
-            link: "#"
+            link: "https://github.com/agkavin/RAG-Pipelines"
         }
     ];
 
@@ -46,28 +46,29 @@ export function Projects() {
                             whileHover={{ y: -5 }}
                             transition={{ type: "spring", stiffness: 300 }}
                         >
-                            <Card className="bg-card/50 border-cyan-900/20 hover:border-cyan-500/30 transition-colors duration-300">
-                                <CardHeader>
-                                    <div className="flex justify-between items-start">
-                                        <CardTitle className="text-xl font-medium text-foreground">
-                                            {project.title}
-                                        </CardTitle>
-                                        {/* Placeholder for link icon if needed */}
-                                    </div>
-                                    <CardDescription className="text-base mt-2 text-muted-foreground">
-                                        {project.description}
-                                    </CardDescription>
-                                </CardHeader>
-                                <CardContent>
-                                    <div className="flex gap-2 flex-wrap">
-                                        {project.tags.map((tag, i) => (
-                                            <Badge key={i} variant="secondary" className="bg-cyan-950/30 text-cyan-400 hover:bg-cyan-900/40 border-0">
-                                                {tag}
-                                            </Badge>
-                                        ))}
-                                    </div>
-                                </CardContent>
-                            </Card>
+                            <Link href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+                                <Card className="bg-card/50 border-cyan-900/20 hover:border-cyan-500/30 transition-colors duration-300 cursor-pointer">
+                                    <CardHeader>
+                                        <div className="flex justify-between items-start">
+                                            <CardTitle className="text-xl font-medium text-foreground">
+                                                {project.title}
+                                            </CardTitle>
+                                        </div>
+                                        <CardDescription className="text-base mt-2 text-muted-foreground">
+                                            {project.description}
+                                        </CardDescription>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <div className="flex gap-2 flex-wrap">
+                                            {project.tags.map((tag, i) => (
+                                                <Badge key={i} variant="secondary" className="bg-cyan-950/30 text-cyan-400 hover:bg-cyan-900/40 border-0">
+                                                    {tag}
+                                                </Badge>
+                                            ))}
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </Link>
                         </motion.div>
                     ))}
                 </div>
