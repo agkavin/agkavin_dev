@@ -5,43 +5,59 @@ import { motion } from 'framer-motion';
 export function Skills() {
     const skills = [
         {
-            category: "Applied AI",
+            category: "Generative AI & Agentic Systems",
             items: [
-                "GenAI Systems",
-                "RAG Architectures",
-                "Agentic AI & Multi-Agent Systems",
-                "MCP & AI Tool-building"
+                "LangChain & LangGraph",
+                "CrewAI & Google ADK",
+                "Mastra AI",
+                "MCP, A2A, ACP, AGUI",
+                "Hugging Face Transformers",
+                "PEFT & LoRA",
+                "ChromaDB"
             ]
         },
         {
-            category: "Engineering",
+            category: "Cloud & Enterprise Platforms",
+            items: [
+                "Azure AI Foundry",
+                "Azure AI Search",
+                "Azure Document Intelligence",
+                "Azure Container Apps",
+                "Vertex AI (API)",
+                "ServiceNow & Shopify"
+            ]
+        },
+        {
+            category: "Backend & Infrastructure",
             items: [
                 "Python (FastAPI, Pydantic)",
                 "TypeScript / Node.js",
-                "Next.js (Frontend Delivery)",
-                "API Design & System Integration"
+                "Next.js",
+                "Docker & GitHub Actions",
+                "Linux & Git",
+                "Bash & Go (Basics)"
             ]
         },
         {
-            category: "Platforms & Deployment",
+            category: "Vision & Document AI",
             items: [
-                "Docker & Container Apps",
-                "GitHub Actions",
-                "Azure OpenAI / Vertex AI",
-                "Cloudflare Pages"
+                "OpenCV & YOLO",
+                "Tesseract OCR",
+                "vLLM",
+                "Azure Vision"
             ]
         }
     ];
 
     return (
-        <section className="py-8 px-6 md:px-0 max-w-2xl mx-auto">
+        <section className="py-6 px-6 md:px-0 max-w-2xl mx-auto">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
             >
-                <h3 className="text-xl font-semibold mb-12 text-cyan-500 flex items-center">
+                <h3 className="text-xl font-semibold mb-6 text-cyan-500 flex items-center">
                     <span className="mr-2 text-cyan-500/50">02.</span> Technical Arsenal
                 </h3>
 

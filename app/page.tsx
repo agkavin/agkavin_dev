@@ -1,13 +1,15 @@
-import { Hero } from '@/components/sections/hero';
-import { Experience } from '@/components/sections/experience';
-import { Skills } from '@/components/sections/skills';
-import { Approach } from '@/components/sections/approach';
-import { Projects } from '@/components/sections/projects';
-import { Footer } from '@/components/sections/footer';
+import { Hero } from '@/components/home/hero';
+import { Experience } from '@/components/home/experience';
+import { Skills } from '@/components/home/skills';
+import { ProjectsHome } from '@/components/home/projects-home';
+import { Achievements } from '@/components/home/achievements';
+import { Footer } from '@/components/home/footer';
+import { Navigation } from '@/components/navigation';
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground antialiased selection:bg-cyan-900/30">
+      <Navigation />
       <div className="flex flex-col lg:flex-row min-h-screen">
         {/* Left Side - Fixed Hero */}
         <div className="lg:w-2/5 lg:fixed lg:h-screen lg:flex lg:items-center lg:justify-center">
@@ -19,8 +21,8 @@ export default function Home() {
           <div className="max-w-3xl mx-auto">
             <Experience />
             <Skills />
-            <Approach />
-            <Projects />
+            <ProjectsHome />
+            <Achievements />
             <Footer />
           </div>
         </div>
